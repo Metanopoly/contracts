@@ -179,20 +179,6 @@ contract ERC721Drop is
         emit TokenURIRevealed(_index, revealedURI);
     }
 
-    /*//////////////////////////////////////////////////////////////
-                        Minting/burning logic
-    //////////////////////////////////////////////////////////////*/
-
-    /**
-     *  @notice         Lets an owner or approved operator burn the NFT of the given tokenId.
-     *  @dev            ERC721A's `_burn(uint256,bool)` internally checks for token approvals.
-     *
-     *  @param _tokenId The tokenId of the NFT to burn.
-     */
-    function burn(uint256 _tokenId) external virtual {
-        _burn(_tokenId, true);
-    }
-
     /*///////////////////////////////////////////////////////////////
                         Internal functions
     //////////////////////////////////////////////////////////////*/
